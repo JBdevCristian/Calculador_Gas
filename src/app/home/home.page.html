@@ -1,0 +1,33 @@
+<ion-content [fullscreen]="true">
+ 
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-img src="/assets/logo.png"></ion-img>
+      </ion-col>
+      <ion-col size="12">
+        <h4>Saiba qual a melhor opção para abastecimento do seu carro.</h4>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item>
+          <ion-input label="Preço Alcool, ex: 1,90" labelPlacement="floating" type="number" [(ngModel)]="precoAlcool"></ion-input>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-item>
+          <ion-input label="Preço Gasolina, ex: 2,90" labelPlacement="floating" type="number" [(ngModel)]="precoGasolina"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" (click)="calcular()">Calcular</ion-button>
+      </ion-col>
+
+      <ion-col size="12">
+        <h5 class="ion-text-center">Resultado:</h5>
+        <p>{{resultado}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
